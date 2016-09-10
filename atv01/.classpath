@@ -1,176 +1,27 @@
-diff --git a/atv01/.settings/org.eclipse.wst.common.component b/atv01/.settings/org.eclipse.wst.common.component
-new file mode 100644
-index 0000000..afcc621
---- /dev/null
-+++ b/atv01/.settings/org.eclipse.wst.common.component
-@@ -0,0 +1,9 @@
-+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-+    <wb-module deploy-name="atv01">
-+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-+        <property name="context-root" value="atividade01"/>
-+        <property name="java-output-path" value="/atv01/target/classes"/>
-+    </wb-module>
-+</project-modules>
-diff --git a/atv01/.settings/org.eclipse.wst.common.project.facet.core.xml b/atv01/.settings/org.eclipse.wst.common.project.facet.core.xml
-new file mode 100644
-index 0000000..ef27789
---- /dev/null
-+++ b/atv01/.settings/org.eclipse.wst.common.project.facet.core.xml
-@@ -0,0 +1,7 @@
-+<?xml version="1.0" encoding="UTF-8"?>
-+<faceted-project>
-+  <fixed facet="wst.jsdt.web"/>
-+  <installed facet="java" version="1.5"/>
-+  <installed facet="jst.web" version="2.5"/>
-+  <installed facet="wst.jsdt.web" version="1.0"/>
-+</faceted-project>
-diff --git a/atv01/.settings/org.eclipse.wst.jsdt.ui.superType.container b/atv01/.settings/org.eclipse.wst.jsdt.ui.superType.container
-new file mode 100644
-index 0000000..3bd5d0a
---- /dev/null
-+++ b/atv01/.settings/org.eclipse.wst.jsdt.ui.superType.container
-@@ -0,0 +1 @@
-+org.eclipse.wst.jsdt.launching.baseBrowserLibrary
-\ No newline at end of file
-diff --git a/atv01/.settings/org.eclipse.wst.jsdt.ui.superType.name b/atv01/.settings/org.eclipse.wst.jsdt.ui.superType.name
-new file mode 100644
-index 0000000..05bd71b
---- /dev/null
-+++ b/atv01/.settings/org.eclipse.wst.jsdt.ui.superType.name
-@@ -0,0 +1 @@
-+Window
-\ No newline at end of file
-diff --git a/atv01/.settings/org.eclipse.wst.validation.prefs b/atv01/.settings/org.eclipse.wst.validation.prefs
-new file mode 100644
-index 0000000..04cad8c
---- /dev/null
-+++ b/atv01/.settings/org.eclipse.wst.validation.prefs
-@@ -0,0 +1,2 @@
-+disabled=06target
-+eclipse.preferences.version=1
-diff --git a/atv01/pom.xml b/atv01/pom.xml
-new file mode 100644
-index 0000000..8347510
---- /dev/null
-+++ b/atv01/pom.xml
-@@ -0,0 +1,38 @@
-+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-+  <modelVersion>4.0.0</modelVersion>
-+
-+  <groupId>ufg-inf-pw-2016-2-atv01</groupId>
-+  <artifactId>atv01</artifactId>
-+  <version>0.0.1-SNAPSHOT</version>
-+  <packaging>war</packaging>
-+
-+	<build>
-+		<!--Define o nome do pacote final que será gerado.-->
-+		<finalName>atividade01</finalName>
-+
-+		<plugins>
-+
-+			<!--Para o Eclipse não reclamar que o "web.xml" está faltado.-->
-+			<plugin>
-+				<groupId>org.apache.maven.plugins</groupId>
-+				<artifactId>maven-war-plugin</artifactId>
-+				<version>2.6</version>
-+				<configuration>
-+					<failOnMissingWebXml>false</failOnMissingWebXml>
-+				</configuration>
-+			</plugin>
-+
-+			<!--Para usar o Tomcat durante o desenvolvimento.-->
-+			<plugin>
-+				<groupId>org.apache.tomcat.maven</groupId>
-+				<artifactId>tomcat7-maven-plugin</artifactId>
-+				<version>2.2</version>
-+				<configuration>
-+					<port>9090</port>
-+				</configuration>
-+			</plugin>
-+
-+		</plugins>
-+	</build>
-+</project>
-diff --git a/atv01/src/main/java/ufg_inf_pw_2016_2_atv01/App.java b/atv01/src/main/java/ufg_inf_pw_2016_2_atv01/App.java
-new file mode 100644
-index 0000000..ceb807b
---- /dev/null
-+++ b/atv01/src/main/java/ufg_inf_pw_2016_2_atv01/App.java
-@@ -0,0 +1,13 @@
-+package ufg_inf_pw_2016_2_atv01;
-+
-+/**
-+ * Hello world!
-+ *
-+ */
-+public class App 
-+{
-+    public static void main( String[] args )
-+    {
-+        System.out.println( "Hello World!" );
-+    }
-+}
-diff --git a/atv01/src/main/webapp/index.html b/atv01/src/main/webapp/index.html
-new file mode 100644
-index 0000000..2571001
---- /dev/null
-+++ b/atv01/src/main/webapp/index.html
-@@ -0,0 +1,10 @@
-+<!DOCTYPE html>
-+<html>
-+<head>
-+<meta charset="UTF-8">
-+<title>Insert title here</title>
-+</head>
-+<body>
-+
-+</body>
-+</html>
-\ No newline at end of file
-diff --git a/atv01/src/test/java/ufg_inf_pw_2016_2_atv01/AppTest.java b/atv01/src/test/java/ufg_inf_pw_2016_2_atv01/AppTest.java
-new file mode 100644
-index 0000000..5e837e4
---- /dev/null
-+++ b/atv01/src/test/java/ufg_inf_pw_2016_2_atv01/AppTest.java
-@@ -0,0 +1,38 @@
-+package ufg_inf_pw_2016_2_atv01;
-+
-+import junit.framework.Test;
-+import junit.framework.TestCase;
-+import junit.framework.TestSuite;
-+
-+/**
-+ * Unit test for simple App.
-+ */
-+public class AppTest 
-+    extends TestCase
-+{
-+    /**
-+     * Create the test case
-+     *
-+     * @param testName name of the test case
-+     */
-+    public AppTest( String testName )
-+    {
-+        super( testName );
-+    }
-+
-+    /**
-+     * @return the suite of tests being tested
-+     */
-+    public static Test suite()
-+    {
-+        return new TestSuite( AppTest.class );
-+    }
-+
-+    /**
-+     * Rigourous Test :-)
-+     */
-+    public void testApp()
-+    {
-+        assertTrue( true );
-+    }
-+}
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
