@@ -6,6 +6,7 @@
 	</head>
 	<body>
 	<div class="container">
+	  <form method="post">
 		<div class="container">
 		  <div class="form-group row col-md-4">
 		  	<h1>Calculadora de IMC</h1>
@@ -15,33 +16,40 @@
 		<div class="container">
 		  <div class="form-group row col-md-4">
 		    <label for="altura">Sua altura: </label>
-		    <input type="text" class="form-control" id="altura" placeholder="0,00">
+		    <input type="text" class="form-control" name="altura" id="altura" placeholder="0,00">
 		  </div>
 	    </div>
 	    <div class="container">
 		  <div class="form-group row col-md-4">
 		    <label for="peso">Seu Peso:</label>
-		    <input type="text" class="form-control" id="peso" placeholder="00,0">
+		    <input type="text" class="form-control" id="peso" name="peso" placeholder="00,0">
 		  </div>
 	    </div>
 	    <div class="container">
 		  <div class="form-goup row col-md-4">
 				<label for="sexo">Sexo:</label>
-				<select id="sexo" class="form-control">
-				  <option>Masculino</option>
-				  <option>Feminino</option>
+				<select name="sexo" id="sexo" class="form-control">
+				  <option  value="M">Masculino</option>
+				  <option  value="F">Feminino</option>
 				</select>
 		   </div>
 	    </div>
 	    <div class="container">
 			<label class="bg-danger">Obs.: O cálculo é diferenciado para homens e mulheres.</label>
 		</div>
+		<%
+			String Saltura = request.getParameter("altura");
+			String Speso = request.getParameter("peso");
+			String Ssexo = request.getParameter("sexo");
+
+		%>
 		<div class="container">
 		  <button type="button" 
 		  		  class="btn btn-default" 
-		  		  onclick="location.href='calculadora_de_imc.jsp'">Calcular</button>
+		  		  onclick="location.href='calculadora_de_imc.jsp?altura=${Saltura}&peso=${Speso}&sexo=${Ssexo}'">Calcular</button>
+		  		  <!-- onclick=CapturaDados(altura,peso,altura)>Calcular</button>  -->  
 		</div> 
-	  
+	  </form>
 		<div class="container">
 		<p></p>
 		<div class="container">

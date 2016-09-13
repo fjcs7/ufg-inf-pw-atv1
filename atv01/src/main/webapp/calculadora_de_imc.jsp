@@ -4,5 +4,8 @@
 <html>
   	<body>
 		<% out.println(" O Imc retornado é " + calculadora.RetornaImcCalculado().toString()); %>
+		<% out.println("${param.altura}"); %>
+		<% out.println("${param.peso}"); %>
+		<% out.println("${param.sexo}"); %>
 	</body>
 </html>
