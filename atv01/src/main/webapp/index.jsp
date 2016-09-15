@@ -6,8 +6,8 @@
 	</head>
 	<body>
 	<div class="container">
-	  	<%@ include file="form_calculadora.jsp" %>
-	  	<%@ include file="complemento_de_pagina.html" %>
+		<%@ include file="form_calculadora.jsp" %>
+		<%@ include file="complemento_de_pagina.html" %>
 	 </div>  
 	</body>
 </html>
